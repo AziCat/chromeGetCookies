@@ -1,0 +1,30 @@
+{
+	"name": "Get Cookies",
+	"manifest_version": 2,
+	"version": "1.0",
+	"description": "The util is used to get cookies at chrome",
+	"browser_action": {
+		"default_icon": "cookie.png"
+	},
+	"permissions": [
+		"cookies",
+		"http://*/*",
+		"https://*/*"
+	],
+	"background": {
+		"scripts": [
+			"background.js"
+		]
+	},
+	"content_scripts": [
+		{
+			"matches": [
+				"https://*/bhdx/*",
+				"http://*/bhdx/*"
+			],
+			"js": [
+				"script.js"
+			]
+		}
+	]
+}
